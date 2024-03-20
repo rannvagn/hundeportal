@@ -1,1 +1,9 @@
-fonts.css
+@font-face {
+    font-family: "Alora";
+    src: url(FontsFree-Net-Alora.ttf);
+}
+
+@font-face {
+    font-family: "Amatic";
+    src: url(AmaticSC-Regular.ttf);
+}
