@@ -49,12 +49,12 @@ filter: brightness(70%); /* Adjust brightness to darken the image */
 }
 
 /* MOBIL */
-@media only screen and (max-width: 300px) {  
+@media only screen and (max-width: 767px) {  
     .dropdown-links li a.active {
         color: #FF887A;
     }
 }
 
-@media only screen and (min-width: 301px) {
+@media only screen and (min-width: 768px) {
 
 }

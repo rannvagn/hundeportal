@@ -630,7 +630,7 @@ footer {
 }
 
 // Mobile styles
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 767px) {
     .topmenu {
         display: none;
     }
@@ -647,10 +647,8 @@ footer {
     }
 
     .header-logo {
-        width: 70%;
+        width: 100%;
         z-index: 101;
-        padding: 0;
-        padding-left: 2rem;
     }
 
     .burgermenu {
@@ -683,7 +681,7 @@ footer {
         width: 100%;
         opacity: 0;
         visibility: hidden;
-        @include transition(opacity, visibility);
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
     }
 
     .menu-toggle:checked + .dropdown {
@@ -724,7 +722,13 @@ footer {
     }
 }
 
-@media only screen and (min-width: 301px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .header-logo {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
     .dropdown, .burgermenu {
         display: none;
     }

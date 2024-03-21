@@ -564,7 +564,7 @@ footer .kontakt .footer-hund {
   z-index: 1;
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 767px) {
   .topmenu {
     display: none;
   }
@@ -579,10 +579,8 @@ footer .kontakt .footer-hund {
     margin-bottom: 6rem;
   }
   .header-logo {
-    width: 70%;
+    width: 100%;
     z-index: 101;
-    padding: 0;
-    padding-left: 2rem;
   }
   .burgermenu {
     z-index: 101;
@@ -610,7 +608,7 @@ footer .kontakt .footer-hund {
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity, visibility 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   }
   .menu-toggle:checked + .dropdown {
     opacity: 1;
@@ -643,7 +641,12 @@ footer .kontakt .footer-hund {
     color: #FF887A;
   }
 }
-@media only screen and (min-width: 301px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .header-logo {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 768px) {
   .dropdown, .burgermenu {
     display: none;
   }
