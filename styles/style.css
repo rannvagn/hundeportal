@@ -404,75 +404,13 @@ h1 {
     position: relative;
     z-index: 100;
     padding-top: 8rem;
+    padding-bottom: 10rem;
 }
-
-/*
-.personligheder1 {
-    display: flex;
-}
-
-.personligheder2 {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.cta1 {
-    margin-left: 3rem;
-    margin-top: 2rem;
-}
-
-.cta2 {
-    margin-left: 10rem;
-    margin-top: 6rem;
-}
-
-.cta3 {
-    margin-right: 4rem;
-    margin-top: -13rem;
-}
-
-.cta4 {
-    margin-right: 5rem;
-    margin-top: -10rem;
-}
-
-.cta-circle {
-    display: flex;
-    background-color: #334BB9;
-    border-radius: 50%;
-    width: 8rem;
-    height: 8rem;
-    object-fit: cover;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.5s, color 0.5s;
-}
-
-.cta-circle p {
-    color: #FEF7EC;
-    font-size: .75rem;
-}
-
-.cta-circle:hover {
-    background-color: #FF887A;
-}
-
-.cta-circle:active {
-    background-color: #d47166;
-}
-
-.cta-circle:hover p {
-    color: #334BB9;
-}
-
-.cta-circle:active p {
-    color: #263889;
-} */
 
 .cta-link {
     position: absolute;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: -2rem;
+    right: 12rem;
   }
 
 .cta-img {
