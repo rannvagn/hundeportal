@@ -1,0 +1,731 @@
+// Variabler
+$blue: #334BB9;
+$orange: #FF887A;
+$white: #FEF7EC;
+$black: #111111;
+
+// Mixins
+@mixin transition($properties...) {
+    transition: $properties 0.5s ease-in-out;
+}
+
+// Global styles
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: $white;
+    color: $black;
+}
+
+// Header styles
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-logo {
+        padding: 2rem;
+        z-index: 101;
+        color: $blue;
+        width: 30%;
+    }
+
+    .topmenu {
+        z-index: 100;
+
+        .topmenu-links {
+            display: flex;
+            list-style-type: none;
+            font-family: "jumble";
+            font-size: 1.5rem;
+
+            a {
+                padding: 2rem;
+                color: $blue;
+
+                &:hover {
+                    color: $orange;
+                }
+
+                &:active {
+                    color: darken($orange, 10%);
+                }
+
+                &.active {
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+
+// Hjem styles
+.sct1-index {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: auto;
+    column-gap: 3rem;
+
+    .velkommen-txt {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        align-self: center;
+
+        h1, h2, p {
+            margin: 0;
+        }
+
+        h1 {
+            font-family: "amatic", sans-serif;
+            color: $blue;
+            font-size: 4rem;
+            text-align: right;
+        }
+
+        h2 {
+            text-align: end;
+            color: $orange;
+            font-family: "peachy-keen-jf";
+            font-size: 1rem;
+        }
+    }
+
+    .velkommen-img {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+.sct2-index {
+    background-color: $orange;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+
+    h2 {
+        text-align: left;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .hvem-txt {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding-right: 4rem;
+        justify-self: center;
+        align-self: center;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        z-index: 5;
+    }
+
+    .hvem-p {
+        font-family: "peachy-keen-jf";
+        padding-top: 1rem;
+    }
+
+    .img-bubbles {
+        display: flex;
+        flex-direction: column;
+        margin-top: -4rem;
+        padding-bottom: 4rem;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .bubble1 {
+        border-radius: 50%;
+        width: 20rem;
+        height: 20rem;
+        object-fit: cover;
+        margin-left: 18rem;
+    }
+
+    .bubble2 {
+        border-radius: 50%;
+        width: 24rem;
+        height: 24rem;
+        object-fit: cover;
+        margin-left: -4rem;
+        margin-top: -3rem;
+    }
+
+    .bubble3 {
+        border-radius: 50%;
+        width: 16rem;
+        height: 16rem;
+        object-fit: cover;
+        margin-left: 28rem;
+        margin-top: -6rem;
+    }
+}
+
+.sct3 {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 3;
+    grid-column-gap: 6rem;
+    grid-row-gap: 2rem;
+    justify-content: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+
+    h2 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: center;
+    }
+
+    .inden {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .efter {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    h3 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        text-align: center;
+        color: $blue;
+
+        &:hover {
+            color: $orange;
+            cursor: pointer;
+        }
+
+        &:active {
+            color: darken($orange, 10%);
+        }
+    }
+}
+
+.sct4 {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 3;
+    grid-column-gap: 6rem;
+    grid-row-gap: 2rem;
+    justify-content: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+
+    h2 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+    }
+
+    .hvalp, .voksen, .senior {
+        grid-column-start: span 1;
+        grid-row-start: span 1;
+    }
+
+    h3 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        text-align: center;
+        color: $blue;
+
+        &:hover {
+            color: $orange;
+            cursor: pointer;
+        }
+
+        &:active {
+            color: darken($orange, 10%);
+        }
+    }
+}
+
+.sct5 {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 3;
+    grid-column-gap: 6rem;
+    grid-row-gap: 2rem;
+    justify-content: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+
+    h2 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+    }
+
+    .sundhed, .træning, .faq {
+        grid-column-start: span 1;
+        grid-row-start: span 1;
+    }
+
+    h3 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        text-align: center;
+        color: $blue;
+
+        &:hover {
+            color: $orange;
+            cursor: pointer;
+        }
+
+        &:active {
+            color: darken($orange, 10%);
+        }
+    }
+}
+
+.sct6 {
+    position: relative;
+    overflow: hidden;
+    height: 60rem;
+    margin-bottom: -20rem;
+
+    .hunderacer {
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    h2 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        padding-top: 4rem;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .hunderacer-indhold {
+        position: relative;
+        z-index: 100;
+        padding-top: 8rem;
+        padding-bottom: 10rem;
+    }
+
+    .cta-link {
+        position: absolute;
+        bottom: -2rem;
+        right: 12rem;
+    }
+
+    .cta-img {
+        width: 10rem;
+        height: 10rem;
+        display: block;
+        @include transition(filter);
+        z-index: 100;
+    }
+
+    .cta p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        color: $blue;
+        z-index: 100;
+        white-space: nowrap;
+        @include transition(color);
+        text-shadow: 0 0 5px $white;
+    }
+}
+
+/* HUNDERACER SECTION FRA OPRINDELIG CSS */
+.cta:hover .cta-img {
+    filter: brightness(70%);
+}
+
+.cta:hover p {
+    color: #FEF7EC;
+    text-shadow: none;
+}
+
+/* HUNDERACER SIDE */
+.race-oversigt {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(5, auto);
+
+    h2 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+    }
+}
+
+.str-column, .trait-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: span 1;
+}
+
+.underoverskrift {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: $orange;
+}
+
+.str-row, .trait-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+    grid-column-gap: 6rem;
+
+    h3 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        text-align: center;
+        color: $blue;
+
+        &:hover {
+            color: $orange;
+            cursor: pointer;
+        }
+
+        &:active {
+            color: darken($orange, 10%);
+        }
+    }
+}
+
+.trait a {
+    flex-basis: calc(33.333% - 2rem);
+    margin-bottom: 2rem;
+}
+
+/* HUNDERACER LAYOUT FRA OPRINDELIG CSS */
+.race-oversigt {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(5, auto);
+}
+
+.race-oversigt h2 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+}
+
+.str-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.underoverskrift {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #FF887A;
+}
+
+.str-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+    grid-column-gap: 6rem;
+}
+
+.str-row h3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    color: #334BB9;
+}
+
+.str-row h3:hover {
+    color: #FF887A;
+    cursor: pointer;
+}
+
+.str-row h3:active {
+    color: #d47166;
+}
+
+.trait-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.trait-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+    grid-column-gap: 6rem;
+}
+
+.trait-row h3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    color: #334BB9;
+}
+
+.trait-row h3:hover {
+    color: #FF887A;
+    cursor: pointer;
+}
+
+.trait-row h3:active {
+    color: #d47166;
+}
+
+.trait a {
+    flex-basis: calc(33.333% - 2rem);
+    margin-bottom: 2rem;
+}
+
+
+// Footer styles
+footer {
+    background-color: $blue;
+
+    .kontakt {
+        padding-top: 6rem;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        grid-template-rows: 3;
+        column-gap: 3rem;
+        row-gap: 2rem;
+        justify-content: space-evenly;
+
+        h4 {
+            font-family: "amatic";
+            color: $white;
+            font-size: 2rem;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            text-align: center;
+            padding-bottom: 5rem;
+        }
+
+        h5 {
+            font-family: "verdana";
+            font-size: .75rem;
+            color: $white;
+            margin: .5rem;
+        }
+
+        p {
+            font-family: "verdana";
+            color: $white;
+            font-size: .75rem;
+        }
+
+        .kontakt1, .kontakt2, .kontakt3 {
+            grid-column-start: span 1;
+            grid-row-start: span 1;
+            text-align: center;
+            z-index: 3;
+        }
+
+        .some {
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            gap: 6rem;
+            margin-top: 4rem;
+            z-index: 3;
+            padding-bottom: 2rem;
+
+            .fa-brands {
+                color: $white;
+                font-size: 1.5rem;
+
+                &:focus, &:hover {
+                    color: $orange;
+                }
+            }
+        }
+
+        .footer-hund {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            width: 10rem;
+            justify-self: end;
+            bottom: 0;
+            z-index: 1;
+        }
+    }
+}
+
+// Mobile styles
+@media only screen and (max-width: 300px) {
+    .topmenu {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 6rem;
+    }
+
+    .header-logo {
+        width: 70%;
+        z-index: 101;
+        padding: 0;
+        padding-left: 2rem;
+    }
+
+    .burgermenu {
+        z-index: 101;
+    }
+
+    .fa-bars {
+        cursor: pointer;
+        font-size: 2rem;
+        padding-right: 2rem;
+        color: $blue;
+
+        &:hover {
+            color: $orange;
+        }
+
+        &:active {
+            color: darken($orange, 10%);
+        }
+    }
+
+    .dropdown {
+        background-color: $white;
+        position: absolute;
+        top: 0%;
+        z-index: 100;
+        padding: 1rem;
+        padding-top: 6rem;
+        border-bottom: 1px solid $orange;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(opacity, visibility);
+    }
+
+    .menu-toggle:checked + .dropdown {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dropdown-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 1rem;
+        gap: 3rem;
+        list-style: none;
+        font-size: 1rem;
+        font-family: "jumble";
+
+        a {
+            color: $blue;
+            text-decoration: none;
+
+            &:focus {
+                color: $blue;
+            }
+
+            &:hover {
+                color: $orange;
+            }
+
+            &:active {
+                color: darken($orange, 10%);
+            }
+        }
+
+        .active {
+            color: $orange;
+        }
+    }
+}
+
+@media only screen and (min-width: 301px) {
+    .dropdown, .burgermenu {
+        display: none;
+    }
+}
