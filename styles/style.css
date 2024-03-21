@@ -445,7 +445,105 @@ h1 {
 }
 
 /* HUNDERACER */
+.race-oversigt {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(5, auto);
+}
 
+.race-oversigt h2 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+}
+
+.str-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.underoverskrift {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #FF887A;
+}
+
+.str-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+    grid-column-gap: 6rem;
+}
+
+.str-row h3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    color: #334BB9;
+}
+
+.str-row h3:hover {
+    color: #FF887A;
+    cursor: pointer;
+}
+
+.str-row h3:active {
+    color: #d47166;
+}
+
+.trait-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.trait-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+    grid-column-gap: 6rem;
+}
+
+.trait-row h3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+    color: #334BB9;
+}
+
+.trait-row h3:hover {
+    color: #FF887A;
+    cursor: pointer;
+}
+
+.trait-row h3:active {
+    color: #d47166;
+}
+
+.trait a {
+    flex-basis: calc(33.333% - 2rem);
+    margin-bottom: 2rem;
+}
 
 /* FOOTER */
 footer {
