@@ -31,14 +31,15 @@ body {
 // Header styles
 header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
     .header-logo {
         padding: 2rem;
-        z-index: 101;
+        z-index: 150;
         color: $blue;
-        width: 30%;
+        width: 16rem;
     }
 
     .topmenu {
@@ -227,6 +228,11 @@ header {
     }
 }
 
+/* INFO SIDE*/
+.sct3.info {
+    margin-top: 1rem;
+}
+
 .sct4 {
     display: grid;
     grid-template-columns: 3;
@@ -327,7 +333,7 @@ header {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 100;
+        z-index: 99;
         padding-top: 4rem;
     }
 
@@ -337,7 +343,7 @@ header {
 
     .hunderacer-indhold {
         position: relative;
-        z-index: 100;
+        z-index: 99;
         padding-top: 8rem;
         padding-bottom: 10rem;
     }
@@ -439,110 +445,60 @@ header {
     }
 }
 
+.trait-row {
+    flex-wrap: wrap;
+}
+
 .trait a {
     flex-basis: calc(33.333% - 2rem);
     margin-bottom: 2rem;
 }
 
-/* HUNDERACER LAYOUT FRA OPRINDELIG CSS */
-.race-oversigt {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(5, auto);
-}
-
-.race-oversigt h2 {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    text-align: center;
-}
-
-.str-column {
+.lexicon-sct {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
 }
 
-.underoverskrift {
-    text-align: center;
+/*LEXICON SIDE*/
+.lexicon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-top: 1rem;
-    font-size: 1.5rem;
-    color: #FF887A;
-}
-
-.str-row {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 2rem;
     margin-bottom: 8rem;
-    grid-column-gap: 6rem;
+
+    h2 {
+        text-align: center;
+        padding-bottom: 3rem;
+    }
 }
 
-.str-row h3 {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    text-align: center;
-    color: #334BB9;
-}
-
-.str-row h3:hover {
-    color: #FF887A;
-    cursor: pointer;
-}
-
-.str-row h3:active {
-    color: #d47166;
-}
-
-.trait-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-.trait-row {
+.galleri {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 8rem;
-    grid-column-gap: 6rem;
-}
+    justify-content: space-around;
+    gap: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 
-.trait-row h3 {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    text-align: center;
-    color: #334BB9;
-}
+    a {
+        text-align: center;
+    }
 
-.trait-row h3:hover {
-    color: #FF887A;
-    cursor: pointer;
-}
+    h3 {
+        color: $blue;
 
-.trait-row h3:active {
-    color: #d47166;
-}
+        &:hover {
+            color: $orange;
+            cursor: pointer;
+        }
 
-.trait a {
-    flex-basis: calc(33.333% - 2rem);
-    margin-bottom: 2rem;
+        &:active {
+            color: darken($orange, 10%);
+        }
+    }
 }
 
 
@@ -559,7 +515,7 @@ footer {
         grid-template-rows: 3;
         column-gap: 3rem;
         row-gap: 2rem;
-        justify-content: space-evenly;
+        justify-content: center;
 
         h4 {
             font-family: "amatic";
@@ -646,13 +602,8 @@ footer {
         margin-bottom: 6rem;
     }
 
-    .header-logo {
-        width: 100%;
-        z-index: 101;
-    }
-
     .burgermenu {
-        z-index: 101;
+        z-index: 150;
     }
 
     .fa-bars {
@@ -674,7 +625,7 @@ footer {
         background-color: $white;
         position: absolute;
         top: 0%;
-        z-index: 100;
+        z-index: 149;
         padding: 1rem;
         padding-top: 6rem;
         border-bottom: 1px solid $orange;
@@ -720,6 +671,174 @@ footer {
             color: $orange;
         }
     }
+
+    /*HJEM*/
+    .circle-img {
+        width: 17rem;
+        height: 17rem;
+    }
+  
+    .sct1-index {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        margin-top: 6rem;
+        justify-content: center;
+        overflow: hidden;
+    
+        .velkommen-txt {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            padding: 2rem;
+            z-index: 50;
+  
+            h1 {
+                font-size: 4rem;
+            }
+        }
+  
+        .velkommen-img {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            justify-self: center;
+            margin-top: -8rem;
+            z-index: 1;
+            overflow: hidden;
+  
+            .hjem-img {
+                width: 28rem;
+                height: 28rem;
+            }
+        }
+  }
+  
+  /*VELKOMMEN SCT2 orange baggrund*/
+  .sct2-index {
+    margin-top: 15rem;
+  
+    .hvem-txt {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      align-self: center;
+      margin: 0;
+      margin-top: 12rem;
+      margin-bottom: 6rem;
+  
+      h2 {
+        font-size: 1.5rem;
+        text-align: right;
+      }
+    }
+  
+    .img-bubbles {
+      .bubble1 {
+        width: 12rem;
+        height: 12rem;
+        margin-left: 8rem;
+        margin-top: -3rem;
+      }
+  
+      .bubble2 {
+        width: 15rem;
+        height: 15rem;
+        margin-left: -5rem;
+        margin-top: -2rem;
+      }
+  
+      .bubble3 {
+        width: 14rem;
+        height: 14rem;
+        margin-left: 7rem;
+        margin-top: 46rem;
+      }
+    }
+  }
+  
+  /*SCT3 alt du bør vide - index*/
+  .sct3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12rem;
+  }
+  
+  /* INFO SIDE*/
+  .sct3.info {
+    margin-top: 8rem;
+  }
+  
+  .sct4.info,
+  .sct5.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sct6 {
+    .cta-link {
+      position: absolute;
+      bottom: -8rem;
+      right: 12rem;
+    }
+  
+    .cta-img {
+      width: 8rem;
+      height: 8rem;
+      box-shadow: -3px 2px 5px .5px #334BB9;
+    }
+  
+    .cta p {
+      font-size: .80rem;
+    }
+  }
+  
+  /*HUNDERACER SIDE*/
+  .race-oversigt {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+  
+    .str-row {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /*LEXICON*/
+  .lexicon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.galleri {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+  /*FOOTER*/
+    .desktop-kontakt {
+        display: none;
+    }
+
+    .mobil-kontakt {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        row-gap: 2rem;
+        margin-bottom: 5rem;
+    }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -731,5 +850,17 @@ footer {
 @media only screen and (min-width: 768px) {
     .dropdown, .burgermenu {
         display: none;
+    }
+
+    .mobil-kontakt {
+        display: none;
+    }
+
+    .img-txt {
+
+        .circle-img {
+            width: 10rem;
+            height: 10rem;
+        }
     }
 }

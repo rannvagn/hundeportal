@@ -19,14 +19,15 @@ body {
 
 header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 header .header-logo {
   padding: 2rem;
-  z-index: 101;
+  z-index: 150;
   color: #334BB9;
-  width: 30%;
+  width: 16rem;
 }
 header .topmenu {
   z-index: 100;
@@ -192,6 +193,11 @@ header .topmenu .topmenu-links a.active {
   color: #ff5a47;
 }
 
+/* INFO SIDE*/
+.sct3.info {
+  margin-top: 1rem;
+}
+
 .sct4 {
   display: grid;
   grid-template-columns: 3;
@@ -282,7 +288,7 @@ header .topmenu .topmenu-links a.active {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
+  z-index: 99;
   padding-top: 4rem;
 }
 .sct6 p {
@@ -290,7 +296,7 @@ header .topmenu .topmenu-links a.active {
 }
 .sct6 .hunderacer-indhold {
   position: relative;
-  z-index: 100;
+  z-index: 99;
   padding-top: 8rem;
   padding-bottom: 10rem;
 }
@@ -384,110 +390,55 @@ header .topmenu .topmenu-links a.active {
   color: #ff5a47;
 }
 
+.trait-row {
+  flex-wrap: wrap;
+}
+
 .trait a {
   flex-basis: calc(33.333% - 2rem);
   margin-bottom: 2rem;
 }
 
-/* HUNDERACER LAYOUT FRA OPRINDELIG CSS */
-.race-oversigt {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(5, auto);
-}
-
-.race-oversigt h2 {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  text-align: center;
-}
-
-.str-column {
+.lexicon-sct {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
 }
 
-.underoverskrift {
-  text-align: center;
+/*LEXICON SIDE*/
+.lexicon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 1rem;
-  font-size: 1.5rem;
-  color: #FF887A;
-}
-
-.str-row {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
   margin-bottom: 8rem;
-  grid-column-gap: 6rem;
 }
-
-.str-row h3 {
-  grid-row-start: 3;
-  grid-row-end: 4;
+.lexicon h2 {
   text-align: center;
-  color: #334BB9;
+  padding-bottom: 3rem;
 }
 
-.str-row h3:hover {
-  color: #FF887A;
-  cursor: pointer;
-}
-
-.str-row h3:active {
-  color: #d47166;
-}
-
-.trait-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
-
-.trait-row {
+.galleri {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 8rem;
-  grid-column-gap: 6rem;
+  justify-content: space-around;
+  gap: 3rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
-
-.trait-row h3 {
-  grid-row-start: 3;
-  grid-row-end: 4;
+.galleri a {
   text-align: center;
+}
+.galleri h3 {
   color: #334BB9;
 }
-
-.trait-row h3:hover {
+.galleri h3:hover {
   color: #FF887A;
   cursor: pointer;
 }
-
-.trait-row h3:active {
-  color: #d47166;
-}
-
-.trait a {
-  flex-basis: calc(33.333% - 2rem);
-  margin-bottom: 2rem;
+.galleri h3:active {
+  color: #ff5a47;
 }
 
 footer {
@@ -503,7 +454,7 @@ footer .kontakt {
   -moz-column-gap: 3rem;
        column-gap: 3rem;
   row-gap: 2rem;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 footer .kontakt h4 {
   font-family: "amatic";
@@ -578,12 +529,8 @@ footer .kontakt .footer-hund {
     align-items: center;
     margin-bottom: 6rem;
   }
-  .header-logo {
-    width: 100%;
-    z-index: 101;
-  }
   .burgermenu {
-    z-index: 101;
+    z-index: 150;
   }
   .fa-bars {
     cursor: pointer;
@@ -601,7 +548,7 @@ footer .kontakt .footer-hund {
     background-color: #FEF7EC;
     position: absolute;
     top: 0%;
-    z-index: 100;
+    z-index: 149;
     padding: 1rem;
     padding-top: 6rem;
     border-bottom: 1px solid #FF887A;
@@ -640,6 +587,146 @@ footer .kontakt .footer-hund {
   .dropdown-links .active {
     color: #FF887A;
   }
+  /*HJEM*/
+  .circle-img {
+    width: 17rem;
+    height: 17rem;
+  }
+  .sct1-index {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    margin-top: 6rem;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .sct1-index .velkommen-txt {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 2rem;
+    z-index: 50;
+  }
+  .sct1-index .velkommen-txt h1 {
+    font-size: 4rem;
+  }
+  .sct1-index .velkommen-img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    margin-top: -8rem;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .sct1-index .velkommen-img .hjem-img {
+    width: 28rem;
+    height: 28rem;
+  }
+  /*VELKOMMEN SCT2 orange baggrund*/
+  .sct2-index {
+    margin-top: 15rem;
+  }
+  .sct2-index .hvem-txt {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-self: center;
+    margin: 0;
+    margin-top: 12rem;
+    margin-bottom: 6rem;
+  }
+  .sct2-index .hvem-txt h2 {
+    font-size: 1.5rem;
+    text-align: right;
+  }
+  .sct2-index .img-bubbles .bubble1 {
+    width: 12rem;
+    height: 12rem;
+    margin-left: 8rem;
+    margin-top: -3rem;
+  }
+  .sct2-index .img-bubbles .bubble2 {
+    width: 15rem;
+    height: 15rem;
+    margin-left: -5rem;
+    margin-top: -2rem;
+  }
+  .sct2-index .img-bubbles .bubble3 {
+    width: 14rem;
+    height: 14rem;
+    margin-left: 7rem;
+    margin-top: 46rem;
+  }
+  /*SCT3 alt du bør vide - index*/
+  .sct3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12rem;
+  }
+  /* INFO SIDE*/
+  .sct3.info {
+    margin-top: 8rem;
+  }
+  .sct4.info,
+  .sct5.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sct6 .cta-link {
+    position: absolute;
+    bottom: -8rem;
+    right: 12rem;
+  }
+  .sct6 .cta-img {
+    width: 8rem;
+    height: 8rem;
+    box-shadow: -3px 2px 5px 0.5px #334BB9;
+  }
+  .sct6 .cta p {
+    font-size: 0.8rem;
+  }
+  /*HUNDERACER SIDE*/
+  .race-oversigt {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+  }
+  .race-oversigt .str-row {
+    display: flex;
+    flex-direction: column;
+  }
+  /*LEXICON*/
+  .lexicon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+  .galleri {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /*FOOTER*/
+  .desktop-kontakt {
+    display: none;
+  }
+  .mobil-kontakt {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    row-gap: 2rem;
+    margin-bottom: 5rem;
+  }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .header-logo {
@@ -649,5 +736,12 @@ footer .kontakt .footer-hund {
 @media only screen and (min-width: 768px) {
   .dropdown, .burgermenu {
     display: none;
+  }
+  .mobil-kontakt {
+    display: none;
+  }
+  .img-txt .circle-img {
+    width: 10rem;
+    height: 10rem;
   }
 }/*# sourceMappingURL=style.css.map */
