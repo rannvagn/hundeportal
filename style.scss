@@ -74,7 +74,7 @@ header {
 // Hjem styles
 .sct1-index {
     display: grid;
-    grid-template-columns: 2;
+    grid-template-columns: repeat(2, auto);
     grid-template-rows: auto;
     column-gap: 3rem;
 
@@ -181,8 +181,8 @@ header {
 
 .sct3 {
     display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 3;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     grid-column-gap: 6rem;
     grid-row-gap: 2rem;
     justify-content: center;
@@ -235,8 +235,8 @@ header {
 
 .sct4 {
     display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 3;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
     grid-column-gap: 6rem;
     grid-row-gap: 2rem;
     justify-content: center;
@@ -275,8 +275,8 @@ header {
 
 .sct5 {
     display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 3;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
     grid-column-gap: 6rem;
     grid-row-gap: 2rem;
     justify-content: center;
@@ -512,7 +512,7 @@ footer {
         padding-right: 8rem;
         display: grid;
         grid-template-columns: repeat(3, 33%);
-        grid-template-rows: 3;
+        grid-template-rows: repeat(3, auto);
         column-gap: 3rem;
         row-gap: 2rem;
         justify-content: center;
