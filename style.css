@@ -27,7 +27,7 @@ header .header-logo {
   padding: 2rem;
   z-index: 150;
   color: #334BB9;
-  width: 16rem;
+  width: 20rem;
 }
 header .topmenu {
   z-index: 100;
@@ -36,10 +36,10 @@ header .topmenu .topmenu-links {
   display: flex;
   list-style-type: none;
   font-family: "jumble";
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 header .topmenu .topmenu-links a {
-  padding: 2rem;
+  padding: 1rem;
   color: #334BB9;
 }
 header .topmenu .topmenu-links a:hover {
@@ -529,6 +529,9 @@ footer .kontakt .footer-hund {
     align-items: center;
     margin-bottom: 6rem;
   }
+  .header-logo {
+    max-width: 70%;
+  }
   .burgermenu {
     z-index: 150;
   }
@@ -713,6 +716,8 @@ footer .kontakt .footer-hund {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 0;
   }
   /*FOOTER*/
   .desktop-kontakt {
@@ -726,11 +731,6 @@ footer .kontakt .footer-hund {
     grid-column-end: 4;
     row-gap: 2rem;
     margin-bottom: 5rem;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .header-logo {
-    width: 70%;
   }
 }
 @media only screen and (min-width: 768px) {
